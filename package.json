@@ -1,0 +1,70 @@
+{
+  "name": "template-server",
+  "version": "1.0.0",
+  "description": "Sequelize server template for Code Team 42",
+  "main": "server.js",
+  "scripts": {
+    "start": "concurrently \" npm run server\" \"cd client && npm run start\"",
+    "server": "nodemon server.js",
+    "seed": "node scripts/seedDB.js",
+    "pretty-quick": "pretty-quick",
+    "lint": "eslint . --ext .js",
+    "fix": "npm run lint -- --fix"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.4",
+    "lint-staged": "^9.2.5",
+    "nodemon": "^1.18.7",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-team-42/template-server.git"
+  },
+  "keywords": [
+    "sequelize",
+    "MySQL",
+    "server",
+    "template",
+    "express",
+    "node"
+  ],
+  "author": "Code Team 42",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/code-team-42/template-server/issues"
+  },
+  "homepage": "https://github.com/code-team-42/template-server#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.9.1",
+    "mysql2": "^1.6.5",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "sequelize": "^5.16.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "pretty-quick --staged",
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
