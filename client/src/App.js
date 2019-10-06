@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import Protected from './pages/Protected'
 import Admin from './pages/Admin'
 import NoMatch from './pages/NoMatch'
+import Community from './pages/Community'
 import ProtectedRoute from './components/ProtectedRoute'
 import NavBar from './components/NavBar'
 import './App.css'
@@ -25,6 +26,7 @@ function App() {
             permissions={['user', 'admin']}
             component={Protected}
           />
+          <Route exact path="/community" component={Community} />
           <ProtectedRoute exact path="/admin" permissions="admin" component={Admin} />
           <Route path="*" component={NoMatch} />
         </Switch>
