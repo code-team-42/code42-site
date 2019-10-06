@@ -10,7 +10,7 @@ const Community = () => {
           eventImage="https://via.placeholder.com/350x150"
           name="Example Event!!"
           info="The event has an address, date, and time. Go to it at the location."
-          link="https://anthonyshannon.dev"
+          link="/"
           linkText="Click here"
         />
       </div>
