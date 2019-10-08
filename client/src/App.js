@@ -2,14 +2,16 @@
 import React from 'react'
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 import { AuthProvider } from './contexts/AuthContext'
-import Home from './pages/Home'
+import Home from './pages/Home/Home'
 import Login from './pages/Login'
+import Coding from './pages/Coding'
+import Forum from './pages/Forum/Forum'
+import Community from './pages/Community/Community'
 import Protected from './pages/Protected'
 import Admin from './pages/Admin'
 import NoMatch from './pages/NoMatch'
 import ProtectedRoute from './components/ProtectedRoute'
 import NavBar from './components/NavBar'
-import './App.css'
 
 function App() {
   return (
@@ -19,6 +21,9 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/coding" component={Coding} />
+          <Route exact path="/forum" component={Forum} />
+          <Route exact path="/community" component={Community} />
           <ProtectedRoute
             exact
             path="/protected"

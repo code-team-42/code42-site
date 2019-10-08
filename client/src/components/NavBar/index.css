@@ -1,0 +1,14 @@
+.a-link-wrapper,
+.link-wrapper {
+  text-decoration: none;
+  color: black;
+}
+
+.home-icon {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.link-wrapper:hover {
+  border-bottom: 3px solid #b8b2a7;
+}
