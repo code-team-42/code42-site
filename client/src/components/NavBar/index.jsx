@@ -17,6 +17,12 @@ const bounce = keyframes`
 `
 
 const styles = {
+  parentDiv: {
+    position: 'fixed',
+    width: '100%',
+    backgroundColor: 'white',
+    zIndex: 1
+  },
   parentContainer: {
     display: 'block',
     position: 'relative',
@@ -110,7 +116,10 @@ const styles = {
       cursor: 'pointer',
       animation: `${bounce} 0.8s`,
       animationDirection: 'alternate',
-      animationIterationCount: 'infinite'
+      animationIterationCount: 'infinite',
+      backgroundColor: '#B8B2A7',
+      color: 'white',
+      transition: '0.5s ease'
     }
   },
   rightNavWrapper: {
@@ -132,7 +141,11 @@ const styles = {
       cursor: 'pointer',
       animation: `${bounce} 0.8s`,
       animationDirection: 'alternate',
-      animationIterationCount: 'infinite'
+      animationIterationCount: 'infinite',
+      color: '#B8B2A7',
+      backgroundColor: 'white',
+      transition: '0.5s ease',
+      border: 'solid #B8B2A7'
     }
   },
   subnavParentContainer: {
@@ -167,7 +180,7 @@ const NavBar = () => {
   // const { isLoaded, state } = useContext(AuthContext)
 
   return (
-    <>
+    <div className={css(styles.parentDiv)}>
       <nav className={css(styles.parentContainer)}>
         <div className={css(styles.navWrapper)}>
           <div className={css(styles.content)}>
@@ -220,7 +233,7 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   )
 }
 

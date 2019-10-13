@@ -12,7 +12,8 @@ const styles = {
     height: '300px',
     backgroundColor: '#fafafa',
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    paddingTop: '100px'
   },
   textWrapper: {
     display: 'flex',

@@ -1,16 +1,19 @@
 import React from 'react'
-import PopularAssessments from '../../components/PopularAssessments'
-import BrowseAssessments from '../../components/BrowseAssessments'
-import TutoringLanding from '../../components/TutoringLanding'
+import AssessmentHighlights from './components/AssessmentHighlights'
 import PageBanner from './components/Banner'
+import ContentContainer from './components/ContentContainer'
+import TutoringHighlights from './components/TutoringHighlights'
+import ChallengeHighlights from './components/ChallengeHighlights'
 
 const Coding = () => {
   return (
     <div>
       <PageBanner />
-      <PopularAssessments />
-      <BrowseAssessments />
-      <TutoringLanding />
+      <ContentContainer>
+        <AssessmentHighlights />
+        <TutoringHighlights />
+        <ChallengeHighlights />
+      </ContentContainer>
     </div>
   )
 }

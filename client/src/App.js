@@ -12,6 +12,7 @@ import Admin from './pages/Admin'
 import NoMatch from './pages/NoMatch'
 import ProtectedRoute from './components/ProtectedRoute'
 import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <ProtectedRoute exact path="/admin" permissions="admin" component={Admin} />
           <Route path="*" component={NoMatch} />
         </Switch>
+        <Footer />
       </AuthProvider>
     </Router>
   )
